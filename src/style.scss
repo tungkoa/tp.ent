@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navigation-menu {
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 64px);
+  background: #031833;
+  top: 64px;
+  left: 0;
+}
+.menu {
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#menu-toggle:checked ~ .menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* You can customize the appearance of the hamburger icon here */
+.hamburger-menu svg {
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#menu-toggle:checked ~ .hamburger-menu svg {
+  transform: rotate(90deg);
+}
+
+.hero {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruitment</title>
+  </head>
+  <body>
+    <header class="bg-white py-4 flex justify-between">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <!-- Logo (You can replace this with your logo image or text) -->
+        <div class="text-2xl font-bold flex items-center">
+          <img src="/logo.svg" alt="" width="50" height="50" />
+          <span class="text-blue-950 ml-5">TP Entertainment</span>
+        </div>
+
+        <div class="flex">
+          <div class="flex font-bold mr-4">
+            <div class="pr-2">VN</div>
+            <div class="text-gray-400">EN</div>
+          </div>
+
+          <div>
+            <!-- Hamburger Menu -->
+            <div class="flex items-center justify-end">
+              <div class="hamburger-menu relative">
+                <input type="checkbox" id="menu-toggle" class="hidden" />
+                <label for="menu-toggle" class="block cursor-pointer">
+                  <svg
+                    class="w-8 h-8"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="hamburger-icon"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16m-7 6h7"
+                    ></path>
+                  </svg>
+                </label>
+                <ul
+                  class="menu hidden absolute right-0 mt-2 bg-white rounded-lg shadow-lg"
+                >
+                  <!-- Your menu items here -->
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                      >About</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                      >Services</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Navigation Menu (Hidden on small screens) -->
+            <nav id="mobile-menu" class="hidden navigation-menu">
+              <a href="#" class="text-white">Home</a>
+              <a href="#" class="text-white">About</a>
+              <a href="#" class="text-white">Services</a>
+              <a href="#" class="text-white">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      class="bg-cover bg-center h-screen text-white py-24 px-10 object-fill"
+      style="
+        background-image: url('/recruitment-banner.png');
+        height: calc(100vh - 82px);
+      "
+    >
+      <div class="hero">
+        <div class="text-2xl">TUYỂN DỤNG</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
