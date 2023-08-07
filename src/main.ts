@@ -1,16 +1,35 @@
-import "./style.scss";
-// Get the menu toggle checkbox and the menu
-const menuToggle = document.getElementById("menu-toggle");
-const menu = document.querySelector(".menu");
-const hamburgerIcon = document.getElementById("hamburger-icon");
+import "./styles/style.scss";
 
-// Add an event listener to the checkbox to toggle the menu
-menuToggle.addEventListener("change", () => {
-  if (menuToggle.checked) {
-    menu.classList.remove("hidden");
-    hamburgerIcon.classList.add("rotate-90");
-  } else {
-    menu.classList.add("hidden");
-    hamburgerIcon.classList.remove("rotate-90");
-  }
+$(document).ready(function () {
+  AOS.init();
+  $(".menu").click(function () {
+    $(this).toggleClass("open menu--white");
+    $("#overlay").toggleClass("open");
+    $(".header").toggleClass("header--in-overlay");
+  });
+
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 2000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  $(document).on("scroll", () => {
+    if ($("body").hasClass("recruitment")) {
+      if ($(window).scrollTop() > 10) {
+        $(".header").removeClass("header--transparent");
+      } else {
+        $(".header").addClass("header--transparent");
+      }
+    }
+  });
 });
